@@ -25,12 +25,12 @@ router.put("/:id", (req, res) => {
     user: req.body.user,
     text: req.body.text
   });
-
   res.sendStatus(200);
 });
 
 router.delete("/:id", (req, res) => {
   chirpsStore.DeleteChirp(req.params.id);
+  res.sendStatus(200);
 });
 
 module.exports = router;
